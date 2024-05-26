@@ -1,11 +1,12 @@
 <?php
+session_start();
 	include 'db/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
-	<title>Web nha khoa</title>
+	<title>Răng đẹp</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -57,7 +58,13 @@
 			if ($tam=='danhmuc') {
 				include('include/danhmuc.php');
 			} elseif($tam=='chitietdichvu') {
-				include ('include/chitietdichvu.php');				
+				include ('include/chitietdichvu.php');
+			} elseif ($tam == 'giohang'){
+				include ('include/giohang.php');	
+			}elseif($tam=='timkiem'){
+				include ('include/timkiem.php');
+			}elseif($tam=='xemdonhang'){
+				include ('include/xemdonhang.php');
 			}else {
 				include ('include/home.php');
 			}
@@ -137,7 +144,7 @@
 	<!-- //popup modal (for location)-->
 
 	<!-- cart-js -->
-	<script src="js/minicart.js"></script>
+	<!-- <script src="js/minicart.js"></script> -->
 	<script>
 		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
